@@ -9,6 +9,21 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+     <!-- Preloader -->
+    <div id="preloader">
+        <div class="amazon-logo-text">amazon</div>
+        <div class="preloader-spinner"></div>
+        <div class="preloader-text">LOADING...</div>
+        <div class="preloader-boxes">
+            <div class="box-animation"></div>
+            <div class="box-animation"></div>
+            <div class="box-animation"></div>
+            <div class="box-animation"></div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
     <header>
     <div class="first-nav">
             <div class="nav-bar">
@@ -197,5 +212,16 @@
         <div class="foot-align4">
             
         </div>
+    </div>
+
+    <!-- Preloader Script -->
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').classList.add('fade-out');
+                document.getElementById('main-content').style.display = 'block';
+            }, 3000); // 3 seconds loading time
+        });
+    </script>
 </body>
 </html>
